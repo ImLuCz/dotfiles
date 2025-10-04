@@ -1,0 +1,36 @@
+#waybar {
+	background-color: #000000;
+	color: #ffffff;
+	font-family: "0xProto Nerd Font", monospace;
+}
+
+#niri-workspaces {
+  color: #ffffff;
+  background: #444444;
+}
+
+#niri-window {
+  color: #ffcc00;
+  background: #222222;
+}
+
+.modules-left > * {
+  margin: 0 6px;
+}
+.modules-center > * {
+  margin: 0 6px;
+}
+.modules-right > * {
+  margin: 0 6px;
+}
+
+#niri-window, #niri-workspaces, #network, #mpd, #idle_inhibitor, #temperature, #backlight, #custom-battery {
+  min-width: 15px;      /* adjust as needed */
+  padding: 0 5px;
+}
+
+#tray > * {
+  margin-left: 6px;
+  margin-right: 6px;
+}
+

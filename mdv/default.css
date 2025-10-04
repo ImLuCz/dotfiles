@@ -1,0 +1,252 @@
+/* table of contents styles */
+#toc {
+  text-align: left;
+  padding-top: 10px;
+  height: 100%;
+  overflow: hidden;
+}
+.toc {
+  margin: 11 16 0 10;
+}
+.toc a {
+  text-decoration: none;
+  color: black;
+}
+.toc a:hover {
+  color: crimson;
+}
+.toc-level-1 {
+  font-weight: bold;
+  font-variant: small-caps;
+  font-size: 15px;
+  text-decoration: underline;
+}
+.toc-level-2 {
+  font-weight: bold;
+  font-size: 14px;
+}
+.toc-level-3 {
+  padding-left: 16px;
+  font-size: 13px;
+}
+.toc-container {
+  background: rgba(255, 255, 255, 0);
+  position: fixed;
+  top: 0;
+  left: -282px;
+  height: 100%;
+  width: 300px;
+  text-align: right;
+  overflow: hidden;
+  z-index: 999;
+  -webkit-transition: all 500ms;
+  -moz-transition: all 500ms;
+  transition: all 500ms;
+}
+.toc-container:hover,
+.toc-container-hover {
+  left: 0;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 3px 3px 9px rgba(70, 70, 70, 0.6);
+}
+.toc-container-hover #toc,
+.toc-container:hover #toc {
+  overflow: auto;
+}
+.toc-caret {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-top: -32;
+  visibility: hidden;
+}
+.toc-caret a {
+  font-weight: bold;
+  font-size: 32px;
+  text-decoration: none;
+  color: black;
+}
+
+/* file selection panel styles */
+#files {
+  text-align: right;
+  padding-top: 10px;
+  height: 100%;
+  overflow: hidden;
+}
+.files {
+  margin: 11 16 0 10;
+}
+.files a {
+  text-decoration: none;
+  color: black;
+}
+.files a:hover {
+  color: crimson;
+}
+.files-container {
+  background: rgba(255, 255, 255, 0);
+  position: fixed;
+  top: 0;
+  right: -282px;
+  height: 100%;
+  width: 300px;
+  text-align: left;
+  overflow: hidden;
+  z-index: 999;
+  -webkit-transition: all 500ms;
+  -moz-transition: all 500ms;
+  transition: all 500ms;
+}
+.files-container:hover,
+.files-container-hover {
+  right: 0;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: -3px 3px 9px rgba(70, 70, 70, 0.6);
+}
+.files-container-hover #files,
+.files-container:hover #files {
+  overflow: auto;
+}
+#files .current {
+  color: purple;
+  font-weight: bold;
+}
+.files-caret {
+  position: absolute;
+  top: 50%;
+  margin-top: -32;
+  visibility: hidden;
+}
+.files-caret a {
+  font-weight: bold;
+  font-size: 32px;
+  text-decoration: none;
+  color: black;
+}
+
+/* general page layouts */
+body {
+  background: #ddd;
+  font-size: 1rem;
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
+    "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  margin: auto;
+  overflow: hidden;
+  zoom: 1;
+  background: white;
+  padding: 30 70;
+}
+
+@media screen {
+  .toc-caret, .files-caret {
+    visibility: visible;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .container {
+    max-width: 1000px;
+  }
+}
+
+/* markdown text & layout styles */
+.md code:not([class]) {
+  color: crimson;
+}
+.md h1 {
+  font-size: 24px;
+  font-variant: small-caps;
+  border-bottom: solid 2px #ddd;
+  font-weight: bold;
+  margin: 20 0 25 0;
+}
+
+.md h2 {
+  font-size: 20px;
+  border-bottom: solid 1px #ddd;
+  font-weight: bold;
+  margin: 15 0 20 0;
+}
+
+.md h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 15 0 20 0;
+}
+
+.md h4 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 10 0 15 0;
+}
+
+.md h5 {
+  font-size: 15px;
+  font-weight: bold;
+  margin: 10 0 15 0;
+}
+
+.md h6 {
+  font-size: 14px;
+  font-weight: bold;
+  margin: 10 0 15 0;
+}
+
+.md p {
+  font-size: 14px;
+  margin: 10 0 15 0;
+  text-align: justify;
+}
+
+.md li {
+  font-size: 14px;
+}
+
+.md table {
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #212529;
+  border-collapse: collapse;
+}
+
+.md table th {
+  font-size: 14px;
+  padding: 0.6rem;
+  border-top: 1px solid #dee2e6;
+}
+
+.md table td {
+  font-size: 14px;
+  padding: 0.6rem;
+  border-top: 1px solid #dee2e6;
+}
+
+.md pre {
+  background: #eee;
+  padding: 10;
+  text-wrap: balance;
+  word-break: break-all;
+}
+
+.md blockquote {
+  border-left: 0.25em solid #dfe2e5;
+  color: #6a737d;
+  padding: 0 0.5em;
+}
+
+.md ol,
+.md ul {
+  padding-inline-start: 1rem;
+}
